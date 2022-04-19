@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;0,700;0,900;1,500;1,700;1,900&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: #e0e8ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body #card {
+  background-color: #f5f7ff;
+  width: 25vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5%;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 10px 10px 10px rgba(128, 128, 128, 0.3);
+          box-shadow: 0px 10px 10px 10px rgba(128, 128, 128, 0.3);
+}
+
+body #card #hero {
+  max-width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: inherit;
+}
+
+body #card #hero img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+body #order-details {
+  max-width: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+body #order-details h1 {
+  padding-top: 10%;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #1f2f56;
+}
+
+body #order-details p {
+  font-size: 0.9rem;
+  padding-top: 5%;
+  font-weight: 500;
+  color: #7280a7;
+}
+
+body #order-details #pricing {
+  background-color: #e0e8ff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 5%;
+  padding: 5%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 98%;
+}
+
+body #order-details #pricing img {
+  width: 20%;
+}
+
+body #order-details #pricing section {
+  width: 60%;
+  line-height: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: left;
+  font-size: 1rem;
+  padding-left: 2%;
+}
+
+body #order-details #pricing a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #3829e0;
+}
+
+body #order-details #pricing a:hover {
+  text-decoration: none;
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}
+
+body #order-details #cta {
+  padding: 10% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body #order-details #cta button {
+  all: unset;
+  border: 1px solid #3829e0;
+  border-radius: 5%;
+  font-size: 0.8rem;
+  padding: 3% 0;
+  color: white;
+  background-color: #3829e0;
+  margin-bottom: 10%;
+  -webkit-box-shadow: 0px 5px 5px 5px rgba(31, 47, 86, 0.1);
+          box-shadow: 0px 5px 5px 5px rgba(31, 47, 86, 0.1);
+  max-width: 100%;
+}
+
+body #order-details #cta button:hover {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+  cursor: pointer;
+}
+
+body #order-details #cta a {
+  text-decoration: none;
+  color: #7280a7;
+}
+
+body #order-details #cta a:hover {
+  color: #1f2f56;
+}
+
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+body .attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  body #card {
+    width: 80%;
+    height: auto;
+  }
+  body .attribution a {
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

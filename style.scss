@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;0,700;0,900;1,500;1,700;1,900&display=swap');
+
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+body,html {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: $Pale-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+
+    & #card {
+        background-color: $Very-pale-blue;
+        width: 25vw;
+        height: fit-content;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-between;
+        border-radius: 5%;
+        overflow: hidden;
+        box-shadow: 0px 10px 10px 10px rgba($color: grey, $alpha: 0.3);
+        
+
+        & #hero {
+            max-width: 100%;
+            height: fit-content;
+            border-radius: inherit;
+
+            & img {
+                width: 100%;
+                height: auto;
+                border-top-left-radius: inherit;
+                border-top-right-radius: inherit;
+            }
+        }
+    }
+    
+    & #order-details{
+        max-width: 80%;
+        align-self: center;
+        text-align: center;
+        overflow: hidden;
+
+        & h1 {
+            padding-top: 10%;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: $Dark-blue;
+        }
+
+        & p {
+            font-size: 0.9rem;
+            padding-top: 5%;
+            font-weight: 500;
+            color: $Desaturated-blue;
+        }
+
+        & #pricing {
+            background-color: $Pale-blue;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            margin-top: 5%;
+            padding: 5%;
+            height: max-content;
+            width: 98%;
+
+            & img {
+                width: 20%;
+            }
+
+            & section {
+                width: 60%;
+                line-height: 50%;
+                align-self: center;
+                text-align: left;
+                font-size: 1rem;
+                padding-left: 2%;
+            }
+
+            & a {
+                align-self: center;
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: $Bright-blue;
+
+                &:hover {
+                    text-decoration: none;
+                    filter: brightness(150%);
+                }
+            }
+        }
+
+        & #cta {
+            padding: 10% 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: center;
+
+            & button {
+                all: unset;
+                border: 1px solid $Bright-blue;
+                border-radius: 5%;
+                font-size: 0.8rem;
+                padding: 3% 0;
+                color: white;
+                background-color: $Bright-blue;
+                margin-bottom: 10%;
+                box-shadow: 0px 5px 5px 5px rgba($color: $Dark-blue, $alpha: 0.1);
+                max-width: 100%;
+
+                &:hover {
+                    filter: brightness(150%);
+                    cursor: pointer;
+                }
+            }
+
+            & a {
+                text-decoration: none;
+                color: $Desaturated-blue;
+                
+                &:hover {
+                    color: $Dark-blue;
+                }
+            }
+        }
+    }
+
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+    }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    body #card {
+        width: 80%;
+        height: auto;
+    }
+
+    body .attribution a {
+        font-size: 0.8rem;
+    }
+}
